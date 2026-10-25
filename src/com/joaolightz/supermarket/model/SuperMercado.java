@@ -12,7 +12,7 @@ public class SuperMercado {
         this.cnpj = cnpj;
     }
 
-    public Funcionarios contrataGerente(String nome) {
+    public Funcionario contrataGerente(String nome) {
         Gerente gerente = new Gerente(nome);
         return gerente;
     }

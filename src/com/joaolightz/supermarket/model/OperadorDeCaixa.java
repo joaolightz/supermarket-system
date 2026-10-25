@@ -1,6 +1,6 @@
 package com.joaolightz.supermarket.model;
 
-public class OperadorDeCaixa extends Funcionarios {
+public class OperadorDeCaixa extends Funcionario {
     OperadorDeCaixa(String nome) {
         super(nome);
     }

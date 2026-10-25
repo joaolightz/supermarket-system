@@ -1,6 +1,6 @@
 package com.joaolightz.supermarket.model;
 
-public class Gerente extends Funcionarios {
+public class Gerente extends FuncionarioManager implements GerenciaFuncionarios {
 
     Gerente(String nome) {
         super(nome);
@@ -10,19 +10,23 @@ public class Gerente extends Funcionarios {
 
     }
 
-    public Funcionarios contrataSupervisor() {
+    @Override
+    public Funcionario contrataSupervisor() {
 
     }
 
-    public Funcionarios contrataOperador() {
+    @Override
+    public Funcionario contrataOperador() {
 
     }
 
-    public Funcionarios contrataRepositor() {
+    @Override
+    public Funcionario contrataRepositor() {
 
     }
 
-    public Funcionarios contrataOperador() {
+    @Override
+    public Funcionario contrataFaxineiro() {
 
     }
 }

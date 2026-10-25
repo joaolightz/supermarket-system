@@ -12,8 +12,7 @@ public class SuperMercado {
         this.cnpj = cnpj;
     }
 
-    public Funcionario contrataGerente(String nome) {
-        Gerente gerente = new Gerente(nome);
-        return gerente;
+    public Gerente contrataGerente(String nome) {
+        return new Gerente(nome);
     }
 }

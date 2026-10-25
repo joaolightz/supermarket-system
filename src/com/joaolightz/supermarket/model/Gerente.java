@@ -2,31 +2,33 @@ package com.joaolightz.supermarket.model;
 
 public class Gerente extends FuncionarioManager implements GerenciaFuncionarios {
 
-    Gerente(String nome) {
+    public Gerente(String nome) {
         super(nome);
     }
 
+/*
     public Produto registraProduto(String produtonome) {
 
     }
+*/
 
     @Override
-    public Funcionario contrataSupervisor() {
-
+    public Funcionario contrataSupervisor(String nome) {
+        return new Supervisor(nome);
     }
 
     @Override
-    public Funcionario contrataOperador() {
-
+    public Funcionario contrataOperador(String nome) {
+        return new OperadorDeCaixa(nome);
     }
 
     @Override
-    public Funcionario contrataRepositor() {
-
+    public Funcionario contrataRepositor(String nome) {
+        return new Repositor(nome);
     }
 
     @Override
-    public Funcionario contrataFaxineiro() {
-
+    public Funcionario contrataFaxineiro(String nome) {
+        return new Faxineiro(nome);
     }
 }

@@ -1,7 +1,5 @@
 package com.joaolightz.supermarket.model;
 
-import javax.script.ScriptException;
-
 public abstract class Funcionario {
     private String nome;
     private double salario;
@@ -9,6 +7,11 @@ public abstract class Funcionario {
 
     Funcionario(String nome) {
         this.nome = nome;
+    }
+
+    @Override
+    public String toString() {
+        return "Funcionario: " + nome + "\nSalario: " + salario + "\nMeta: " + meta;
     }
 
     public String getNome() {

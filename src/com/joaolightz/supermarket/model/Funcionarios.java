@@ -1,4 +1,12 @@
 package com.joaolightz.supermarket.model;
 
-public class Funcionarios {
+public abstract class Funcionarios {
+    private String nome;
+    private double salario;
+    private double meta;
+    private int idade;
+
+    Funcionarios(String nome) {
+        this.nome = nome;
+    }
 }

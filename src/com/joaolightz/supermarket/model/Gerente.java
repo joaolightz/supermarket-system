@@ -32,4 +32,12 @@ public class Gerente extends FuncionarioManager implements GerenciaFuncionarios 
 
         return new Repositor(nome);
     }
+
+    public boolean temPermissaoParaAlterarSalario() {
+        if(this.getAutenticado()) {
+            return true;
+        } else {
+            throw new NaoAutenticadoException();
+        }
+    }
 }

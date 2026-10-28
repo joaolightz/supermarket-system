@@ -24,7 +24,11 @@ public abstract class FuncionarioManager extends Funcionario {
         return autenticado;
     }
 
-    public boolean temPermissaoParaAlterar() {
-        return true;
+    public boolean temPermissaoParaAlterarMeta() {
+        if(this.getAutenticado()) {
+            return true;
+        } else {
+            throw new NaoAutenticadoException();
+        }
     }
 }

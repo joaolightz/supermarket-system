@@ -27,11 +27,8 @@ public abstract class Funcionario {
     }
 
     public void setSalario(Gerente solicitante, Funcionario funcionario, double salario) {
-        if(solicitante == null || !solicitante.temPermissaoParaAlterar()) {
+        if(solicitante == null || !solicitante.temPermissaoParaAlterarSalario()) {
             throw new SecurityException("Sem permissao para alterar o Salario de um Funcionario");
-        }
-        if(!solicitante.getAutenticado()) {
-            throw new NaoAutenticadoException();
         }
         if(salario <= 0) {
             throw new IllegalArgumentException("Salario invalido: " + salario);
@@ -40,11 +37,8 @@ public abstract class Funcionario {
     }
 
     public void setMeta(FuncionarioManager solicitante, Funcionario funcionario, int meta) {
-        if(solicitante == null || !solicitante.temPermissaoParaAlterar()) {
+        if(solicitante == null || !solicitante.temPermissaoParaAlterarMeta()) {
             throw new SecurityException("Sem permissao para alterar a Meta de um Funcionario.");
-        }
-        if(!solicitante.getAutenticado()) {
-            throw new NaoAutenticadoException();
         }
         if(meta <= 0) {
             throw new IllegalArgumentException("Meta invalida: " + meta);

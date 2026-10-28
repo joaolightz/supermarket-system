@@ -14,8 +14,10 @@ public abstract class FuncionarioManager extends Funcionario {
             System.out.println(this.getNome() + " - Autenticado no Sistema");
             autenticado = true;
             return true;
+        } else {
+            autenticado = false;
+            return false;
         }
-        return false;
     }
 
     public boolean getAutenticado() {

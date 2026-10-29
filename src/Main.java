@@ -4,7 +4,7 @@ import com.joaolightz.supermarket.model.SuperMercado;
 import com.joaolightz.supermarket.model.Supervisor;
 
 public class Main {
-    public static void main() {
+    public static void main(String[] args) {
         SuperMercado superMercado = new SuperMercado("Mercantil Legal"); // Cria o Super Mercado
         Gerente gerente = superMercado.contrataGerente(superMercado, "Gerente", "GerenteSenha"); // Super Mercado contrata Gerente, responsável por contratar o Supervisor e demais Funcionários
         gerente.autentica("GerenteSenha"); // Autentica Gerente no Sistema após Login Sucedido com Senha.

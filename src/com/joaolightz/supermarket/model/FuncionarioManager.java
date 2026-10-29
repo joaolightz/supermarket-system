@@ -15,8 +15,8 @@ public abstract class FuncionarioManager extends Funcionario {
             autenticado = true;
             return true;
         } else {
-            throw new SenhaIncorretaException();
             autenticado = false;
+            throw new SenhaIncorretaException();
         }
     }
 

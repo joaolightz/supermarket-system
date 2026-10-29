@@ -13,7 +13,7 @@ public class SuperMercado {
     }
 
     public Gerente contrataGerente(SuperMercado solicitante, String nome, String senha) {
-        if(solicitante == null || nome == null) {
+        if(solicitante == null || nome == null || senha == null) {
             throw new NullPointerException("Argumento nulo especificado");
         }
         return new Gerente(nome, senha);

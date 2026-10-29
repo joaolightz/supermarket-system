@@ -27,7 +27,10 @@ public abstract class Funcionario {
     }
 
     public void setSalario(Gerente solicitante, Funcionario funcionario, double salario) {
-        if(solicitante == null || !solicitante.temPermissaoParaAlterarSalario()) {
+        if(funcionario == null || solicitante == null) {
+            throw new NullPointerException("Argumento nulo especificado");
+        }
+        if(!solicitante.temPermissaoParaAlterarSalario()) {
             throw new SecurityException("Sem permissao para alterar o Salario de um Funcionario");
         }
         if(salario <= 0) {
@@ -37,7 +40,10 @@ public abstract class Funcionario {
     }
 
     public void setMeta(FuncionarioManager solicitante, Funcionario funcionario, int meta) {
-        if(solicitante == null || !solicitante.temPermissaoParaAlterarMeta()) {
+        if(funcionario == null || solicitante == null) {
+            throw new NullPointerException("Argumento nulo especificado");
+        }
+        if(!solicitante.temPermissaoParaAlterarMeta()) {
             throw new SecurityException("Sem permissao para alterar a Meta de um Funcionario.");
         }
         if(meta <= 0) {

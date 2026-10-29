@@ -14,6 +14,9 @@ public abstract class FuncionarioManager extends Funcionario {
             System.out.println(this.getNome() + " - Autenticado no Sistema");
             autenticado = true;
             return true;
+        } else if (getAutenticado()) {
+            autenticado = false;
+            throw new SecurityException("Senha incorreta, autenticacao revogada");
         } else {
             autenticado = false;
             throw new SenhaIncorretaException();

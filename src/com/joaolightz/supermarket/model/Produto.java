@@ -4,7 +4,6 @@ public class Produto {
     private String produto;
     private double preco;
     private int quantidade;
-    private String estado;
 
     Produto(String nome) {
         produto = nome;
@@ -23,10 +22,10 @@ public class Produto {
     }
 
     public String getEstado() {
-        String estado = "Indisponivel";
-        if(quantidade <= 50) estado = "Muito baixo";
-        else if (quantidade <= 100) estado = "Baixo";
-        else if (quantidade <= 250) estado = "OK";
-        return estado;
+        if (quantidade <= 0) return "Indisponivel";
+        else if (quantidade <= 50) return "Muito baixo";
+        else if (quantidade <= 100) return "Baixo";
+        else if (quantidade <= 250) return "OK";
+        else return "Alto";
     }
 }

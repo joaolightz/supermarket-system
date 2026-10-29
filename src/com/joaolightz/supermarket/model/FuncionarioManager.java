@@ -15,12 +15,16 @@ public abstract class FuncionarioManager extends Funcionario {
             autenticado = true;
             return true;
         } else if (getAutenticado()) {
-            autenticado = false;
+            this.revogarAutenticacao();
             throw new SecurityException("Senha incorreta, autenticacao revogada");
         } else {
-            autenticado = false;
+            this.revogarAutenticacao();
             throw new SenhaIncorretaException();
         }
+    }
+
+    private void revogarAutenticacao() {
+        this.autenticado = false;
     }
 
     public boolean getAutenticado() {

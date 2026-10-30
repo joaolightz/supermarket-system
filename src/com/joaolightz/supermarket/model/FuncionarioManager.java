@@ -1,5 +1,8 @@
 package com.joaolightz.supermarket.model;
 
+import com.joaolightz.supermarket.exceptions.NaoAutenticadoException;
+import com.joaolightz.supermarket.exceptions.SenhaIncorretaException;
+
 public abstract class FuncionarioManager extends Funcionario {
     private String senha;
     private boolean autenticado = false;

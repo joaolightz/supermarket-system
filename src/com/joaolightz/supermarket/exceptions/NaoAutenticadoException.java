@@ -1,4 +1,4 @@
-package com.joaolightz.supermarket.model;
+package com.joaolightz.supermarket.exceptions;
 
 public class NaoAutenticadoException extends RuntimeException {
     public NaoAutenticadoException() {

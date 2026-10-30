@@ -1,4 +1,7 @@
-package com.joaolightz.supermarket.model;
+package com.joaolightz.supermarket.interfaces;
+
+import com.joaolightz.supermarket.model.Funcionario;
+import com.joaolightz.supermarket.model.Supervisor;
 
 public interface GerenciaFuncionarios {
     public Supervisor contrataSupervisor(String nome, String senha);

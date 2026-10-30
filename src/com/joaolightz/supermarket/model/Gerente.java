@@ -1,5 +1,8 @@
 package com.joaolightz.supermarket.model;
 
+import com.joaolightz.supermarket.exceptions.NaoAutenticadoException;
+import com.joaolightz.supermarket.interfaces.GerenciaFuncionarios;
+
 public class Gerente extends FuncionarioManager implements GerenciaFuncionarios {
 
     public Gerente(String nome, String senha) {

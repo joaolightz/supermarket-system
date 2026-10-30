@@ -1,4 +1,4 @@
-package com.joaolightz.supermarket.model;
+package com.joaolightz.supermarket.exceptions;
 
 public class SenhaIncorretaException extends RuntimeException {
     public SenhaIncorretaException() {

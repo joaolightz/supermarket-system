@@ -12,6 +12,14 @@ public class SuperMercado {
         this.cnpj = cnpj;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
     public Gerente contrataGerente(String nome, String senha) {
         if(nome == null || senha == null) {
             throw new NullPointerException("Argumento nulo especificado");

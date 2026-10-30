@@ -6,6 +6,9 @@ public abstract class Funcionario {
     private double meta;
 
     Funcionario(String nome) {
+        if(nome == null || nome.isBlank()) {
+            throw new IllegalArgumentException("Nome Invalido de Funcionario!");
+        }
         this.nome = nome;
     }
 

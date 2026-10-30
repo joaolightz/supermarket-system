@@ -6,6 +6,9 @@ public abstract class FuncionarioManager extends Funcionario {
 
     FuncionarioManager(String nome, String senha) {
         super(nome);
+        if(senha == null || senha.isBlank()) {
+            throw new IllegalArgumentException("Senha Invalida de Funcionario!");
+        }
         this.senha = senha;
     }
 
